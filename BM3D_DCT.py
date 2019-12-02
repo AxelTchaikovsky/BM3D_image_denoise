@@ -2,23 +2,22 @@
 
 import cv2
 import PSNR
-import harr
 import numpy
 
 
 cv2.setUseOptimized(True)
 
 # Parameters initialization
-sigma = 25
+sigma = 10
 Threshold_Hard3D = 2.7*sigma           # Threshold for Hard Thresholding
-First_Match_threshold = 2500             # 用于计算block之间相似度的阈值
+First_Match_threshold = 500             # 用于计算block之间相似度的阈值
 Step1_max_matched_cnt = 16              # 组最大匹配的块数
 Step1_Blk_Size = 8                     # block_Size即块的大小，8*8
 Step1_Blk_Step = 3                      # Rather than sliding by one pixel to every next reference block, use a step of Nstep pixels in both horizontal and vertical directions.
 Step1_Search_Step = 3                   # 块的搜索step
 Step1_Search_Window = 39                # Search for candidate matching blocks in a local neighborhood of restricted size NS*NS centered
 
-Second_Match_threshold = 400           # 用于计算block之间相似度的阈值
+Second_Match_threshold = 80           # 用于计算block之间相似度的阈值
 Step2_max_matched_cnt = 32
 Step2_Blk_Size = 8
 Step2_Blk_Step = 3
@@ -349,7 +348,7 @@ def BM3D_2nd_step(_basicImg, _noisyImg):
 
 if __name__ == '__main__':
     cv2.setUseOptimized(True)   # OpenCV 中的很多函数都被优化过（使用 SSE2，AVX 等）。也包含一些没有被优化的代码。使用函数 cv2.setUseOptimized() 来开启优化。
-    img_name = "/Users/arcadia/Documents/DIP/bm3d/lena512color.tiff"  # 图像的路径
+    img_name = "sigma10.jpg"  # 图像的路径
     img = cv2.imread(img_name, cv2.IMREAD_GRAYSCALE)    # 读入图像，cv2.IMREAD_GRAYSCALE:以灰度模式读入图像
 
     # 记录程序运行时间
