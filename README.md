@@ -1,8 +1,8 @@
 # BM3D
 
-BM3D_haar.py BM3D: implementation based on haar![cat10](/Users/arcadia/Documents/DIP/BM3D_image_denoise/result/cat10.jpg)
+BM3D_haar.py BM3D: implementation based on haar![cat10](/result/cat10.jpg)
 
-BM3D_DCT.py BM3D: implementation based on DCT![cat10d](/Users/arcadia/Documents/DIP/BM3D_image_denoise/result/cat10d.jpg)
+BM3D_DCT.py BM3D: implementation based on DCT![cat10d](/result/cat10d.jpg)
 
 addnoise.py: add pepper or Gaussian white noise to picture
 
@@ -16,4 +16,4 @@ pystack.py: concatnate the result images for report
 
 Run false_color.m to see result.
 
-![res1](/Users/arcadia/Documents/DIP/img_lab2/falsecolor/res1.jpg)
+![res1](/falsecolor/res1.jpg)
